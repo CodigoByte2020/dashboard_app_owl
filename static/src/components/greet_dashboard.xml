@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="dashboard.GreetDashboard" owl="1">
+        <div class="container-fluid p-3">
+            <div class="card mt-3">
+                <div class="card-header">
+                    <h2 t-esc="state.title"/>
+                </div>
+                <div class="card-body">
+                    <t t-foreach="state.information" t-as="information" t-key="information.id">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" t-esc="information.description"></li>
+                            <li class="list-group-item">
+                                <t t-if="information.website">
+                                    <a t-attf-href="#{information.website}" class="link-primary" t-esc="information.website" target="_blank"/>
+                                </t>
+                                <t t-else="">
+                                    Without website
+                                </t>
+                            </li>
+                            <li class="list-group-item text-center">
+                                <span t-esc="information.author"/>
+                            </li>
+                        </ul>
+                    </t>                    
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>
