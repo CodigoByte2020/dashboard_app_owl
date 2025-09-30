@@ -24,8 +24,6 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        # 'views/views.xml',
         'views/greet_dashboard.xml'
     ],
     'installable': True,
@@ -37,4 +35,3 @@
         ]
     }
 }
-# 14:40

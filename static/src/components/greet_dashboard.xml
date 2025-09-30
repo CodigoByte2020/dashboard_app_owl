@@ -20,10 +20,24 @@
                             </li>
                             <li class="list-group-item text-center">
                                 <span t-esc="information.author"/>
-                            </li>
+                            </li>                            
                         </ul>
-                    </t>                    
+                    </t>
                 </div>
+                <div class="card-body">
+                    <div class="card mt-3" style="width: 18rem;">
+                        <div class="card">
+                            <OwlChartRenderer title="'Odoo Modules'" data="state.countModules"/>
+                        </div>                    
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card mt-3" style="width: 18rem;">
+                        <div class="card">
+                            <OwlChartRenderer title="'Odoo Modules'" data="state.countModules" type="'bar'"/>  
+                        </div>                    
+                    </div>
+                </div>            
             </div>
         </div>
     </t>
